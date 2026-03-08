@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>🔥 Meme Generator Pro 🔥</h1>
+        
+        <div class="controls">
+            <input type="file" id="imageInput" accept="image/*">
+            <button id="addTextBtn" disabled>➕ Add Text</button>
+            <button id="downloadBtn" disabled>💾 Download Meme</button>
+        </div>
+
+        <div class="workspace">
+            <div id="canvasContainer" class="canvas-container">
+                <img id="memeImage" src="" alt="" style="display: none;">
+                <!-- Text layers will be appended here -->
+            </div>
+            
+            <div id="textControls" class="text-controls" style="display: none;">
+                <h3>Edit Selected Text</h3>
+                <input type="text" id="textInput" placeholder="Enter text">
+                <label>
+                    Size: <input type="range" id="textSize" min="20" max="100" value="40">
+                </label>
+                <label>
+                    Color: <input type="color" id="textColor" value="#ffffff">
+                </label>
+                <button id="deleteTextBtn" class="danger">🗑️ Delete</button>
+            </div>
+        </div>
+        
+        <div id="loadingOverlay" class="loading-overlay">
+            <div class="spinner"></div>
+            <p>Generating your masterpiece...</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
