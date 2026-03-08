@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 The Vibe Meme Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>🔥 The Vibe Meme Generator</h1>
+            <p>Manifest your ideas into shareable vibes in seconds.</p>
+        </header>
+
+        <main>
+            <section class="controls-panel glass-panel">
+                <h3>1. Upload your base vibe</h3>
+                <div class="upload-zone" id="upload-zone">
+                    <input type="file" id="image-upload" accept="image/png, image/jpeg, image/jpg">
+                    <p>Click or drag an image here</p>
+                </div>
+
+                <h3>2. Customize the message</h3>
+                <div id="text-blocks-container">
+                    <!-- Text blocks will be added here dynamically -->
+                </div>
+                <button id="add-text-btn" class="secondary-btn">➕ Add More Text</button>
+            </section>
+
+            <section class="preview-panel glass-panel">
+                <h3>3. Preview & Manifest</h3>
+                <div class="canvas-container" id="canvas-container">
+                    <canvas id="meme-canvas"></canvas>
+                    <div id="placeholder-text">Upload an image on the left to see the magic happen.</div>
+                </div>
+                <!-- Note element describing click-to-place -->
+                <p class="helper-text">👇 Click anywhere on the image to place your active text block!</p>
+                <button id="download-btn" class="primary-btn" disabled>🚀 Download Meme</button>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
